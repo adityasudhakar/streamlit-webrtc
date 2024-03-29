@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 # This code is based on https://github.com/streamlit/demo-self-driving/blob/230245391f2dda0cb464008195a470751c01770b/streamlit_app.py#L48  # noqa: E501
 def download_file(url, download_to: Path, expected_size=None):
-    # Don't download the file twice.
+    # Don't download the file twice or even thrice.
     # (If possible, verify the download using the file length.)
     if download_to.exists():
         if expected_size:
